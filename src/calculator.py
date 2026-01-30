@@ -1,7 +1,7 @@
-# create a command-line calculator that asks the user to enter
+# Create a command-line calculator that asks the user to enter
 # two numbers and then displays the result of adding those two numbers.
 
-def addition(first_number, second_number):
+def addition(first_number: float, second_number: float) -> float:
     """Returns the sum of two numbers."""
     return first_number + second_number
 

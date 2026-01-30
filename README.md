@@ -1,2 +1,2 @@
 # python-projects
-This repo groups all personal projects in python
+This repo groups all my personal projects in python
