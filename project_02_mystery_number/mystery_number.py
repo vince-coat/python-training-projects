@@ -1,6 +1,6 @@
 import random
 
-a, b = 0, 50
+a, b = 0, 100
 attempts = 5
 mystery_number = random.randint(a, b)
 
