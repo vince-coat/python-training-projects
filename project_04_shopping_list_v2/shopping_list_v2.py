@@ -1,21 +1,21 @@
 import sys
 import os
+import json
 
 CUR_DIR = os.path.dirname(__file__)
 FILE_PATH = os.path.join(CUR_DIR, "liste.json")
 
 if os.path.exists(FILE_PATH):
-    print("The file exists.")
+    with open(FILE_PATH, "r") as f:
+        LISTE = json.load(f)
 else:
-    print("The file does not exist.")
+    LISTE = []
 
 CHOICES = ["Add an item",
            "Remove an item",
            "Display my list",
            "Clear my list",
            "Quit"]
-
-LISTE = []
 
 while True:
 
@@ -53,6 +53,8 @@ while True:
         print(f"Your list has been succefully cleared!")
 
     elif int(user_choice) == 5:
+        with open(FILE_PATH, "w") as f:
+            json.dump(LISTE, f, indent=4)
         print("See you later!")
         sys.exit()
 
